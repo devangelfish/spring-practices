@@ -22,7 +22,6 @@ public class UserController {
 	}
 	
 	@RequestMapping(value="/join", method=RequestMethod.POST)
-//	public String join(String name, String email, String password) {
 	public String join(UserVo vo) {
 		System.out.println("UserController:join:" + vo);
 		return "redirect:/";
