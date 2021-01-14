@@ -17,7 +17,15 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
 			<version>${org.springframework-version}</version>
-		</dependency>		
+		</dependency>
+		
+		<!-- 자바 표준(JR330) scanning, wiring Annotation -->
+		<dependency>
+			<groupId>javax.inject</groupId>
+			<artifactId>javax.inject</artifactId>
+			<version>1</version>
+		</dependency>
+			
 		<!-- test -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -28,6 +36,12 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.github.stefanbirkner</groupId>
+			<artifactId>system-rules</artifactId>
+			<version>1.19.0</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
