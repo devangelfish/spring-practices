@@ -11,5 +11,4 @@ public class HighSchoolRapper3Final implements CompactDisc {
 	public void play() {
 		System.out.println("playing " + title + " by " + artist);
 	}
-
 }

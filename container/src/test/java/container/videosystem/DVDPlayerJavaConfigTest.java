@@ -8,6 +8,7 @@ import org.junit.Test;
 import org.junit.contrib.java.lang.system.SystemOutRule;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -24,6 +25,7 @@ public class DVDPlayerJavaConfigTest {
 	private DigitalVideoDisc dvd;
 	
 	@Autowired
+	@Qualifier("player04")
 	private DVDPlayer player;
 	
 	@Test
@@ -39,6 +41,6 @@ public class DVDPlayerJavaConfigTest {
 	@Test
 	public void playTest() {
 		player.play();
-		assertEquals("player movie Marvels' Avengers", systemOutRule.getLog().replace("\r\n", "").replace("\n", ""));
+		assertEquals("playing movie Marvel's Avengers", systemOutRule.getLog().replace("\r\n", "").replace("\n", ""));
 	}
 }
